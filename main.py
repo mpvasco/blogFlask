@@ -1,13 +1,21 @@
-from flask import Flask
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+lista_users = ['paula', 'yasmim', 'paloma']
 
-print('ola')
-# help(Flask)  #details about Flask
+@app.route("/")
+def home():
+    return render_template('home.html')
+
+@app.route("/contato")
+def contact():
+    return render_template('contact.html')
+
+@app.route("/usuarios")
+def users():
+    return render_template('users.html', x=lista_users)
+
 
 if __name__ == '__main__':
   app.run(debug=True)

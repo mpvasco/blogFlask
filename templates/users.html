@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container">
+    <p>Hello, Users!</p>
+    {% for i in x %}
+    <p>{{ i }}</p>
+    <hr>
+    {% endfor %}
+  </div>
+{% endblock %}
