@@ -11,8 +11,8 @@ class FormCreateAccount(FlaskForm):
 
 
 class FormLogin(FlaskForm):
-  email = StringField('E-mail', validators=[DataRequired(), Email()])
-  password = PasswordField('Password', validators=[DataRequired(), Length(6,20)])
+  emaill = StringField('E-mail', validators=[DataRequired(), Email()])
+  passwordl = PasswordField('Password', validators=[DataRequired(), Length(6,20)])
   remember_me = BooleanField('Remmember access data')
   btn_submit_login = SubmitField('Login')
 
